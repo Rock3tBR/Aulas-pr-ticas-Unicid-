@@ -1,0 +1,151 @@
+Exerc 1 - #include <stdio.h>
+
+int main(){
+	int a;
+	
+	printf("Favor informar o valor de A:");
+		scanf("%d", &a);
+		
+	if (a <= 0){
+		printf ("número inválido!");
+		return 1;
+}
+	printf ("Números antecessores de %d:\n", a);
+	
+	while (a > 0){
+		printf("%d\n", a);
+		a--;
+	}
+	return 0;	
+}
+
+Exerc 2 - 
+#include <stdio.h>
+
+int main(){
+	int a, soma = 0;
+	
+	printf("Favor definir o valor de A");
+		scanf("%d", &a);
+	
+	if (a <= 0){
+		printf("O número informado está inválido");
+		return 1;
+	}
+	printf("\nSoma dos antecessores");
+	
+	for (int i = 1; i <= a; i++){
+		soma += i;
+	}
+	printf("A soma dos primeiros %d números é: %d\n", a, soma);
+	return 0;
+}
+Exerc 3 - Corrigir
+#include <stdio.h>
+
+int main() {
+    int idade, maioresDe18 = 0;
+
+    for (int i = 1; i <= 20; i++) {
+        printf("Digite a idade da pessoa %d: ", i);
+        scanf("%d", &idade);
+
+        if (idade > 18) {
+            maioresDe18++;
+        }
+    }
+
+    printf("Quantidade de pessoas com idade maior do que 18 anos: %d\n", maioresDe18);
+
+    return 0;
+}
+
+Exerc 4 - 
+#include <stdio.h>
+
+int main() {
+    int voto, candidato1 = 0, candidato2 = 0, candidato3 = 0, candidato4 = 0, votosNulos = 0, votosBrancos = 0;
+
+    printf("Digite o código de votação (0 para encerrar): ");
+    scanf("%d", &voto);
+
+    while (voto != 0) {
+        switch (voto) {
+            case 1:
+                candidato1++;
+                break;
+            case 2:
+                candidato2++;
+                break;
+            case 3:
+                candidato3++;
+                break;
+            case 4:
+                candidato4++;
+                break;
+            case 5:
+                votosNulos++;
+                break;
+            case 6:
+                votosBrancos++;
+                break;
+            default:
+                printf("Código de votação inválido.\n");
+        }
+
+        printf("Digite o código de votação (0 para encerrar): ");
+        scanf("%d", &voto);
+    }
+
+    printf("Total de votos para o Candidato 1: %d\n", candidato1);
+    printf("Total de votos para o Candidato 2: %d\n", candidato2);
+    printf("Total de votos para o Candidato 3: %d\n", candidato3);
+    printf("Total de votos para o Candidato 4: %d\n", candidato4);
+    printf("Total de votos nulos: %d\n", votosNulos);
+    printf("Total de votos em branco: %d\n", votosBrancos);
+
+    return 0;
+}
+Exerc 5 -
+#include <stdio.h>
+
+int main (){
+	int i = 1;
+	
+	while (i <= 20){
+		printf("%d\n", i);
+		i++;
+	}
+	return 0;
+}
+Exerc 6 - 
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    do {
+        printf("Digite um número inteiro entre 1 e 10: ");
+        scanf("%d", &numero);
+
+        if (numero >= 1 && numero <= 10) {
+            printf("Tabuada do %d:\n", numero);
+            for (int i = 1; i <= 10; i++) {
+                printf("%d x %d = %d\n", numero, i, numero * i);
+            }
+        } else {
+            printf("Número fora do intervalo permitido.\n");
+        }
+
+        printf("Deseja continuar? (1 para sim, 0 para não): ");
+        int continuar;
+        scanf("%d", &continuar);
+
+        if (continuar != 1) {
+            break;
+        }
+
+    } while (1);
+
+    return 0;
+}
